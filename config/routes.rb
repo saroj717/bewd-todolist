@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'homepage#index'
   get 'tasks' => 'tasks#index'
   post 'tasks' => 'tasks#create'
